@@ -12,12 +12,13 @@ main section form {
 }
 
 main section form textarea {
+  border: none;
   border-bottom: 3px solid black;
   background-color: #f4f1ec;
 }
 
 main section div button {
-  font-family: 'Bungee';
+  font-family: 'Bungee', sans-serif;
   background-color: #4056A1;
   color: #FFFFFF;
 }
@@ -26,4 +27,5 @@ main section div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-top: 5px;
 }
