@@ -1,0 +1,29 @@
+.container {
+  justify-content: center;
+}
+
+main section {
+  flex-grow: 0.75;
+}
+
+main section form {
+  display: flex;
+  flex-direction: column;
+}
+
+main section form textarea {
+  border-bottom: 3px solid black;
+  background-color: #f4f1ec;
+}
+
+main section div button {
+  font-family: 'Bungee';
+  background-color: #4056A1;
+  color: #FFFFFF;
+}
+
+main section div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
