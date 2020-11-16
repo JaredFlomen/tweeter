@@ -1,0 +1,13 @@
+nav {
+  height: 120px;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+nav span {
+  font-family: 'Bungee';
+  padding: 1.5em;
+}

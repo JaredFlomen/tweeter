@@ -1,0 +1,9 @@
+header {
+  height: 400px;
+  display: flex;
+  flex-grow: 1;
+  background-color: gainsboro;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
