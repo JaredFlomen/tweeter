@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  opacity: 0.5;
 }
 
 .username {
@@ -13,11 +14,12 @@
 }
 
 .tweet:hover .username{
- display: block;
+  display: block;
 }
 
 .tweet:hover {
   box-shadow: 10px -5px #cccccc;
+  opacity: 1;
 }
 
 .tweet header {
