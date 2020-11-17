@@ -1,5 +1,46 @@
-.outline {
-  border: 2px dotted black;
+.tweet {
+  border: 5px dotted black;
   height: 200px;
   flex-grow: 0.75;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.tweet header {
+  display: flex;
+  border: 3px dotted blue;
+  align-items: center;
+  height: 25%;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.username {
+  margin-left: auto;
+}
+
+.tweet footer {
+  border: 3px dotted red;
+  display: flex;
+  height: 25%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.date {
+  margin-right: auto;
+}
+
+.content {
+  border: 3px dotted orange;
+  display: flex;
+  border-bottom: 3px solid black;
+  align-items: center;
+  width: 95%;
+  height: 50%;
+  margin: auto;
 }
