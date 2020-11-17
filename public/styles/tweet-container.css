@@ -1,5 +1,5 @@
 .tweet {
-  border: 5px dotted black;
+  border: 2px solid black;
   height: 200px;
   flex-grow: 0.75;
   display: flex;
@@ -7,40 +7,50 @@
   justify-content: flex-start;
 }
 
-.tweet header {
-  display: flex;
-  border: 3px dotted blue;
-  align-items: center;
-  height: 25%;
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
 .username {
   margin-left: auto;
+  display: none;
 }
 
-.tweet footer {
-  border: 3px dotted red;
+.tweet:hover .username{
+ display: block;
+}
+
+.tweet:hover {
+  border-right: 3px solid blue;
+  border-bottom: 3px solid blue;
+}
+
+.tweet header {
   display: flex;
-  height: 25%;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  height: 25%;
   padding-right: 20px;
   padding-left: 20px;
-}
-
-.date {
-  margin-right: auto;
+  padding-top: 10px;
+  font-size: 75%;
 }
 
 .content {
-  border: 3px dotted orange;
   display: flex;
   border-bottom: 3px solid black;
   align-items: center;
   width: 95%;
   height: 50%;
   margin: auto;
+}
+
+.tweet footer {
+  display: flex;
+  height: 25%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-size: 75%;
+}
+
+.date {
+  margin-right: auto;
 }
