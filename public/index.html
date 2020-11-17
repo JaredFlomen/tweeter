@@ -7,23 +7,29 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
-    <!-- Fallback font if the browser has an error downloading font above-->
+    <!-- Import fonts from google -->
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,700;1,300;1,700&display=swap" rel="stylesheet">
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <!--Importing icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+    <!-- Link to layout style sheet -->
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css"/>
 
     <!-- Link to nav style sheet-->
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
     <!-- Link to header stylesheet-->
-    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css"/>
 
     <!-- Link to new tweet stylesheet-->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
-    <!-- Link to double down icon -->
+    <!-- Link to tweet-container stylesheet-->
+    <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
+
+    <!-- Link to double down arrow icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- External JS -->
@@ -31,52 +37,67 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+
+    <!-- Character Counter JS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span class="nav-title">TWEETER</span>
-     
+      <span class="nav-title">TWEETER
+      </span>
       <div class="write-tweet">
-          <span>
-        <b>Write</b> a new tweet 
-      </span>
-      <span>
-        <i class="fa fa-angle-double-down" 
-        style="font-size:24px;color:red"></i>
-      </span>
+        <span>
+          <b>Write</b> a new tweet 
+        </span>
+        <span>
+          <i class="fa fa-angle-double-down" style="font-size:24px;color:red"></i>
+        </span>
       </div>
-
-      
-      
-
-      
     </nav>
-
-    <header>
+    <header class = "img-header">
       <div>
-          <img src="/images/profile-hex.png"> 
+        <img src="/images/profile-hex.png"> 
       </div>
       <br>
       <div>
-          <h2>Jared Flomen</h2>
+        <h2>Jared Flomen</h2>
       </div>
     </header>
 
-    <!-- Page-specific (main) content here -->
+    <!-- Page-specific (main) content -->
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form>
-          <!-- <label for="tweet-text">What are you humming about?</label> -->
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-          <div>
-            <button type="submit" method="POST" action="/tweets">TWEET</button>
+        <form id="form">
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div id="below-txt-box">
+            <button type="submit" id="tweet-button" method="POST" action="/tweets">TWEET</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
+      <article class="tweet">
+        <header>
+          <img src="https://pixabay.com/get/5fe7d6474c52b10ff3d89960c62e377b133bdde45a56_640.png" height="40">
+          <p>First Name</p>
+          <p class="username">@SirIsaac</p>
+        </header>
+        <p class="content">
+          If I have seen further it is by standing on the shoulders of giants
+        </p>
+        <footer>
+          <p class="date">10 Days Ago</p>
+          <i class="fas fa-flag"></i>
+          <i class="fas fa-retweet"></i>
+          <i class="fas fa-heart"></i>
+        </footer>
+      </article>
     </main>
   </body>
 </html>
