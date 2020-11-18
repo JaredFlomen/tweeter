@@ -11,13 +11,13 @@ $(document).ready(() => {
     //calls createTweetElement for each tweet
     const updateFeed = createTweetElement(tweet);
     //takes return value and appends it to the tweets container
-    $('.tweet-target').append(updateFeed)
+    $('.tweet-target').prepend(updateFeed)
   }
 }
 
 const createTweetElement = function(tweet) {
   //Generates a DOM structure for a tweet
-  let $tweet2 = $(`
+  let $tweet = $(`
   <article class="tweet">
     <header>
       <img src="${tweet.user.avatars}" height="40"> 
@@ -34,7 +34,7 @@ const createTweetElement = function(tweet) {
       <i class="fas fa-heart"></i>
     </footer>
   </article>`);
-  return $tweet2;
+  return $tweet;
 }
 
 const escape =  function(str) {
@@ -61,16 +61,15 @@ loadTweets();
     
     //Ensuring the tweet isn't too long
     if ($('#tweet-text').val().length > 140 ) {
-      // alert("The Tweet is Too Long")
       $('.error-message').append('<p class="error-handler"><i class="fas fa-exclamation-triangle"></i>Too Long! Please shorten to less than 140 characters<i class="fas fa-exclamation-triangle"></i></p>')
     
     //Ensuring the tweet isn't empty 
     } else if ($('#tweet-text').val() === '' || $('#tweet-text').val() === null) {
-      // alert("Please enter a valid tweet")
       $('.error-message').append('<p class="error-handler"><i class="fas fa-exclamation-triangle"></i>Please enter a valid tweet<i class="fas fa-exclamation-triangle"></i></p>')
 
     //If all the criteria above passes, then the tweet will be added to the object in /tweets and rendered on the browser
     } else {
+      //Removes the error message
       $('.error-handler').remove('.error-handler')
       $.ajax({
         url: '/tweets',
@@ -79,6 +78,10 @@ loadTweets();
       })
       .then(res => {
         $('.tweet-target').empty()
+        //Clears the text box after submitting a tweet
+        $('#tweet-text').val('')
+        //Resets the counter to 140 after submitting a tweet
+        $('.counter').val(140)
         loadTweets();
       })
     }
