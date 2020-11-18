@@ -62,11 +62,12 @@ loadTweets();
     //Ensuring the tweet isn't too long
     if ($('#tweet-text').val().length > 140 ) {
       // alert("The Tweet is Too Long")
-      $('.error-message').append('<p class="error-handler">ERROR</p>')
+      $('.error-message').append('<p class="error-handler"><i class="fas fa-exclamation-triangle"></i>Too Long! Please shorten to less than 140 characters<i class="fas fa-exclamation-triangle"></i></p>')
     
     //Ensuring the tweet isn't empty 
     } else if ($('#tweet-text').val() === '' || $('#tweet-text').val() === null) {
-      alert("Please enter a valid tweet")
+      // alert("Please enter a valid tweet")
+      $('.error-message').append('<p class="error-handler"><i class="fas fa-exclamation-triangle"></i>Please enter a valid tweet<i class="fas fa-exclamation-triangle"></i></p>')
 
     //If all the criteria above passes, then the tweet will be added to the object in /tweets and rendered on the browser
     } else {
