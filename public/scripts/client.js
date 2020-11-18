@@ -70,7 +70,6 @@ const loadTweets = () => {
       method: 'GET',
     })
     .then(res => {
-      console.log("worked", res);
       renderTweets(res);
     })
 }
@@ -81,15 +80,24 @@ loadTweets();
 
   $('form').on('submit', event => {
     event.preventDefault()
-    $.ajax({
-      url: '/tweets',
-      method: 'POST',
-      data: $('form').serialize()
-    })
-    .then(res => {
-      console.log($('form').serialize())
-      $('.tweet-target').empty()
-      loadTweets();
-    })
+   
+
+    if ($('#tweet-text').val().length > 140 ) {
+      alert("The Tweet is Too Long")
+    } else if ($('#tweet-text').val() === '' || $('#tweet-text').val() === null) {
+      alert("Please enter a valid tweet")
+    } else {
+      $.ajax({
+        url: '/tweets',
+        method: 'POST',
+        data: $('form').serialize()
+      })
+      .then(res => {
+        // console.log($('form').serialize())
+        $('.tweet-target').empty()
+        loadTweets();
+      })
+    }
+   
   })
 })
