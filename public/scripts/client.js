@@ -44,14 +44,14 @@ const escape =  function(str) {
 }
 
 //GET request to load the initial tweets stored in intial-tweets.js
-const loadTweets = () => {
-     $.ajax({
-      url: '/tweets',
-      method: 'GET',
-    })
-    .then(res => {
-      renderTweets(res);
-    })
+function loadTweets() {
+  $.ajax({
+    url: '/tweets',
+    method: 'GET',
+  })
+  .then(res => {
+    renderTweets(res);
+  });
 }
 
 loadTweets();
@@ -61,7 +61,8 @@ loadTweets();
     
     //Ensuring the tweet isn't too long
     if ($('#tweet-text').val().length > 140 ) {
-      alert("The Tweet is Too Long")
+      // alert("The Tweet is Too Long")
+      $('.error-message').append('<p class="error-handler">ERROR</p>')
     
     //Ensuring the tweet isn't empty 
     } else if ($('#tweet-text').val() === '' || $('#tweet-text').val() === null) {
@@ -69,6 +70,7 @@ loadTweets();
 
     //If all the criteria above passes, then the tweet will be added to the object in /tweets and rendered on the browser
     } else {
+      $('.error-handler').remove('.error-handler')
       $.ajax({
         url: '/tweets',
         method: 'POST',
