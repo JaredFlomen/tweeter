@@ -23,3 +23,11 @@ nav {
   align-items: center;
 }
 
+#down-button {
+  background-color: #dcdcdc;
+  border: none;
+}
+
+#down-button:hover {
+  border: 2px solid black;
+}
