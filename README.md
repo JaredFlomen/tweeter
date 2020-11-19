@@ -11,7 +11,7 @@ Tweeter is a simple, single-page Twitter clone.
 
 ## Screenshots
 
-!["Desktop_View"] (https://github.com/JaredFlomen/tweeter/blob/master/docs/DesktopView.png?raw=true)
+!["Desktop_View"](https://github.com/JaredFlomen/tweeter/blob/master/docs/DesktopView.png?raw=true)
 !["Error_Message_Empty_Tweet"](https://github.com/JaredFlomen/tweeter/blob/master/docs/Empty_Tweet_Error.png?raw=true)
 !["Error_Message_Tweet_Too_Long"](https://github.com/JaredFlomen/tweeter/blob/master/docs/Length_Error.png?raw=true)
 !["Mobile_Version_with_Fixed_Nav"](https://github.com/JaredFlomen/tweeter/blob/master/docs/Mobile_Fixed_Nav.png?raw=true)
