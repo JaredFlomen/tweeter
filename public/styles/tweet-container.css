@@ -5,7 +5,8 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  opacity: 0.5;
+  /* opacity: 0.5; */
+  margin-top: 25px;
 }
 
 .username {
@@ -18,8 +19,12 @@
 }
 
 .tweet:hover {
-  box-shadow: 10px -5px #cccccc;
+  box-shadow: 10px 5px #cccccc;
   opacity: 1;
+}
+
+#tweet-title {
+  font-weight: 700;
 }
 
 .tweet header {
@@ -55,3 +60,4 @@
 .date {
   margin-right: auto;
 }
+
