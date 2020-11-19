@@ -1,7 +1,6 @@
 /*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
+ * Client-side JS logic
+ * jQuery loaded
  */
 $(document).ready(() => {
 
@@ -93,6 +92,7 @@ $(document).ready(() => {
           $('#tweet-text').val('');
           //Resets the counter to 140 after submitting a tweet
           $('.counter').val(140);
+          //Calls the loadTweets function
           loadTweets();
         });
     }

@@ -29,24 +29,23 @@
     <!-- Link to tweet-container stylesheet-->
     <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
 
+     <!-- Link to responsive design stylesheet-->
+     <link rel="stylesheet" href="/styles/responsive-design.css" type="text/css" />
+
     <!-- Link to double down arrow icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-
-    <!-- Character Counter JS -->
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <!-- Momemnt CDN for Date -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
 
     <!-- jQuery CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
+    <!-- Top Nav Bar -->
     <nav>
       <span class="nav-title">TWEETER
       </span>
@@ -55,7 +54,8 @@
           <b>Write</b> a new tweet 
         </span>
         <span>
-          <i class="fa fa-angle-double-down" style="font-size:24px;color:red"></i>
+          <button type="click" id="down-button">
+          <i class="fa fa-angle-double-down" style="font-size:24px;color:red"></i></button>
         </span>
       </div>
     </nav>
@@ -68,15 +68,13 @@
         <h2>Jared Flomen</h2>
       </div>
     </header>
-
     <!-- Page-specific (main) content -->
     <main class="container">
       <section class="new-tweet">
         <section class="error-message">
         </section>
-        <h2>Compose Tweet</h2>
         <form id="form">
-          <label for="tweet-text">What are you humming about?</label>
+          <label for="tweet-text" id="tweet-title">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div id="below-txt-box">
             <button type="submit" id="tweet-button" method="POST" action="/tweets">TWEET</button>
@@ -87,5 +85,11 @@
       <section class="tweet-target">
       </section>
     </main>
+     <!-- Character Counter JS -->
+     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/client.js"></script>
+    <!-- External JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </body>
 </html>
