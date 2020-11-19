@@ -9,19 +9,6 @@ Tweeter is a simple, single-page Twitter clone.
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 
-## Screenshots
-
-### Desktop View
-!["Desktop_View"](https://github.com/JaredFlomen/tweeter/blob/master/docs/DesktopView.png?raw=true)
-### Error message if the tweet is empty
-!["Error_Message_Empty_Tweet"](https://github.com/JaredFlomen/tweeter/blob/master/docs/Empty_Tweet_Error.png?raw=true)
-### Error message if the tweet is too long
-!["Error_Message_Tweet_Too_Long"](https://github.com/JaredFlomen/tweeter/blob/master/docs/Length_Error.png?raw=true)
-### Mobile version with a fixed nav
-!["Mobile_Version_with_Fixed_Nav"](https://github.com/JaredFlomen/tweeter/blob/master/docs/Mobile_Fixed_Nav.png?raw=true)
-### Emphasis on a tweet while hovering
-!["Tweet_Embasis_While_Hovering"](https://github.com/JaredFlomen/tweeter/blob/master/docs/Tweet_Emphasis.png?raw=true)
-
 ## Dependencies
 
 - Express
@@ -40,3 +27,16 @@ Tweeter is a simple, single-page Twitter clone.
 - Node
 - Express
 - MongoDB
+
+## Screenshots
+
+### Desktop View
+!["Desktop_View"](https://github.com/JaredFlomen/tweeter/blob/master/docs/DesktopView.png?raw=true)
+### Error message if the tweet is empty
+!["Error_Message_Empty_Tweet"](https://github.com/JaredFlomen/tweeter/blob/master/docs/Empty_Tweet_Error.png?raw=true)
+### Error message if the tweet is too long
+!["Error_Message_Tweet_Too_Long"](https://github.com/JaredFlomen/tweeter/blob/master/docs/Length_Error.png?raw=true)
+### Mobile version with a fixed nav
+!["Mobile_Version_with_Fixed_Nav"](https://github.com/JaredFlomen/tweeter/blob/master/docs/Mobile_Fixed_Nav.png?raw=true)
+### Emphasis on a tweet while hovering
+!["Tweet_Embasis_While_Hovering"](https://github.com/JaredFlomen/tweeter/blob/master/docs/Tweet_Emphasis.png?raw=true)
