@@ -58,6 +58,7 @@ $(document).ready(() => {
 
   $('#down-button').click(function() {
     $('form').slideToggle('slow').css('display', 'flex');
+    $('.error-message').empty();
   });
 
   $('form').on('submit', event => {
