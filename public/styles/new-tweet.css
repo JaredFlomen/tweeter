@@ -1,9 +1,20 @@
 .container {
+  display: flex;
   justify-content: center;
+  flex-direction: column;
+}
+
+.error-handler {
+  display: flex;
+  color: red;
+  border: 3px solid red;
+  justify-content: center;
+  align-items: center;
 }
 
 .new-tweet {
   flex-grow: 0.75;
+  padding-bottom: 10px;
 }
 
 #form {
@@ -28,4 +39,12 @@
   flex-direction: row;
   justify-content: space-between;
   padding-top: 5px;
+}
+
+.counter {
+  font-family: 'Bungee', sans-serif;
+}
+
+.error-message {
+  display: none;
 }
