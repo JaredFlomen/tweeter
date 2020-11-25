@@ -6,6 +6,7 @@
   flex-direction: column;
   justify-content: flex-start;
   margin-top: 25px;
+  background-color: #f4f1ec;
 }
 
 .username {
